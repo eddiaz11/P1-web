@@ -1,138 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Restaurant and Lounge</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col p-2">
-                <h1 class="text-marca">Restaurant &amp; Lounge</h1>
-            </div>
-            <div class="col p-2 text-end">
-                <span><img onclick="showing(2)" src="img/carrito.png" alt="Carrito imagen" class="carrito me-2"></span><span id="numItems"  bind="count">0</span><span> items</span>
-                
-            </div>
+      <div class="row">
+        <div class="col p-2">
+          <h1 class="text-marca">Restaurant &amp; Lounge</h1>
         </div>
-        <hr/>
-        <div class="row mb-3">
-            <img src="img/banner.png" alt="banner" class="w-100">
+        <div class="col p-2 text-end">
+          <span
+            ><img
+              onclick="showing(2)"
+              src="img/carrito.png"
+              alt="Carrito imagen"
+              class="carrito me-2" /></span
+          ><span id="numItems">0</span><span> items</span>
         </div>
-        
-        <div class="row mb-3" >
-            <div class="col">
-                <ul class="nav bg-dark mb-3 p-4" id="nav" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a onclick="showing(1)" class="nav-link text-white active" id="home-tab" data-bs-toggle="tab" data-bs-target="#burguers" type="button" role="tab" aria-controls="burguers" aria-selected="true">Burguers</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a onclick="showing(1)" class="nav-link text-white" id="tacos-tab" data-bs-toggle="tab" data-bs-target="#tacos" type="button" role="tab" aria-controls="tacos" aria-selected="false">Tacos</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a onclick="showing(1)" class="nav-link text-white" id="salad-tab" data-bs-toggle="tab" data-bs-target="#salad" type="button" role="tab" aria-controls="salad" aria-selected="false">Salads</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a onclick="showing(1)" class="nav-link text-white" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts" type="button" role="tab" aria-controls="desserts" aria-selected="false">Desserts</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a onclick="showing(1)" class="nav-link text-white" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks" type="button" role="tab" aria-controls="drinks" aria-selected="false">Drinks and Sides</a>
-                    </li>
-                </ul>
-                <div class="tab-content d-block" id="navContent">
-                    <div class="tab-pane fade show active" id="burguers" role="tabpanel" aria-labelledby="burguers-tab">
-                        <hr/>
-                        <h2 class="text-center">Burguers</h2>
-                        <hr/>     
-                        
-                        <div class="row" id="Burguers">
-                            
-                        </div>
-                        
-                    </div>
-                    <div class="tab-pane fade" id="tacos" role="tabpanel" aria-labelledby="tacos-tab">
-                        <hr/>
-                        <h2 class="text-center">Tacos</h2>
-                        <hr/>
-                        <div class="row" id="Tacos">
-                            
-                        </div>
-                        
-                    </div>
-                    <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
-                        <hr/>
-                        <h2 class="text-center">Salads</h2>
-                        <hr/>
-                        <div class="row" id="Salads">
-                            
-                        </div>
-                        
-                    </div>
-                    <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
-                        <hr/>
-                        <h2 class="text-center">Desserts</h2>
-                        <hr/>
-                        <div class="row" id="Desserts">
-                            
-                        </div>
-                        
-                    </div>
-                    <div class="tab-pane fade" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
-                        <hr/>
-                        <h2 class="text-center">Drinks and Sides</h2>
-                        <hr/>
-                        <div class="row" id="Drinks and Sides">
-                            
-                        </div>
-                        
-                    </div>
-                </div>
+      </div>
+      <hr />
+      <div class="row mb-3">
+        <img src="img/banner.png" alt="banner" class="w-100" />
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <ul class="nav bg-dark mb-3 p-4" id="nav" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                onclick="showing(1)"
+                href="#"
+                class="nav-link text-white active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#burguers"
+                role="tab"
+                aria-controls="burguers"
+                aria-selected="true"
+                >Burguers</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                onclick="showing(1)"
+                href="#"
+                class="nav-link text-white"
+                id="tacos-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#tacos"
+                role="tab"
+                aria-controls="tacos"
+                aria-selected="false"
+                >Tacos</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                onclick="showing(1)"
+                href="#"
+                class="nav-link text-white"
+                id="salad-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#salad"
+                role="tab"
+                aria-controls="salad"
+                aria-selected="false"
+                >Salads</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                onclick="showing(1)"
+                href="#"
+                class="nav-link text-white"
+                id="desserts-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#desserts"
+                role="tab"
+                aria-controls="desserts"
+                aria-selected="false"
+                >Desserts</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                onclick="showing(1)"
+                href="#"
+                class="nav-link text-white"
+                id="drinks-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#drinks"
+                role="tab"
+                aria-controls="drinks"
+                aria-selected="false"
+                >Drinks and Sides</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content d-block" id="navContent">
+            <div
+              class="tab-pane fade show active"
+              id="burguers"
+              role="tabpanel"
+              aria-labelledby="burguers-tab"
+            >
+              <hr />
+              <h2 class="text-center">Burguers</h2>
+              <hr />
+
+              <div class="row" id="Burguers"></div>
             </div>
-            
-        </div>
-        <div class="row d-none" id="car-list">
-            <div class="col">
-                <hr>
-                <h2 class="text-center">Order detail</h2>
-                <hr>
-                <div id="car" class="mb-5">
-                    
-                </div>
-                
+            <div
+              class="tab-pane fade"
+              id="tacos"
+              role="tabpanel"
+              aria-labelledby="tacos-tab"
+            >
+              <hr />
+              <h2 class="text-center">Tacos</h2>
+              <hr />
+              <div class="row" id="Tacos"></div>
             </div>
-            
-        </div>
-        <div class="row">
-            <div class="col text-center">
-                <h6>Contact us:+57 3102105253 - info@restarant.com - @restaurant</h6>
+            <div
+              class="tab-pane fade"
+              id="salad"
+              role="tabpanel"
+              aria-labelledby="salad-tab"
+            >
+              <hr />
+              <h2 class="text-center">Salads</h2>
+              <hr />
+              <div class="row" id="Salads"></div>
             </div>
-        </div>
-    </div>
-    <div class="modal fade" id="cancel" tabindex="-1" aria-labelledby="cancelLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="cancelLabel">Cencel the order</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div
+              class="tab-pane fade"
+              id="desserts"
+              role="tabpanel"
+              aria-labelledby="desserts-tab"
+            >
+              <hr />
+              <h2 class="text-center">Desserts</h2>
+              <hr />
+              <div class="row" id="Desserts"></div>
             </div>
-            <div class="modal-body">
-              Are you sure about cancelling your order?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn confirm" onclick="cancelCar()" data-bs-dismiss="modal">Yes, I want to cancel the order</button>
-              <button type="button" class="btn cancel" onclick="showing(1)" data-bs-dismiss="modal">No, I want to continue adding products</button>
+            <div
+              class="tab-pane fade"
+              id="drinks"
+              role="tabpanel"
+              aria-labelledby="drinks-tab"
+            >
+              <hr />
+              <h2 class="text-center">Drinks and Sides</h2>
+              <hr />
+              <div class="row" id="Drinks and Sides"></div>
             </div>
           </div>
         </div>
       </div>
-</body>
-
-<script src="js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+      <div class="row d-none" id="car-list">
+        <div class="col">
+          <hr />
+          <h2 class="text-center">Order detail</h2>
+          <hr />
+          <div id="car" class="mb-5"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h6>Contact us:+57 3102105253 - info@restarant.com - @restaurant</h6>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="cancel"
+      tabindex="-1"
+      aria-labelledby="cancelLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cancelLabel">Cencel the order</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Are you sure about cancelling your order?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn confirm"
+              onclick="cancelCar()"
+              data-bs-dismiss="modal"
+            >
+              Yes, I want to cancel the order
+            </button>
+            <button
+              type="button"
+              class="btn cancel"
+              onclick="showing(1)"
+              data-bs-dismiss="modal"
+            >
+              No, I want to continue adding products
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
