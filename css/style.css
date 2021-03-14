@@ -1,16 +1,14 @@
-.text-marca{
-    font-family: 'Satisfy', cursive;
+.text-marca {
+  font-family: "Satisfy", cursive;
 }
-img.carrito{
-    height: 40px;
+img.carrito {
+  height: 40px;
 }
-.confirm{
-    border: #3a3c47 1.2pt solid;
-    background-color: #f0eadc;
-
+.confirm {
+  border: #3a3c47 1.2pt solid;
+  background-color: #f0eadc;
 }
-.cancel{
-    border: 1.2pt solid #54c9c7;
-    background-color: #f05358;
-
+.cancel {
+  border: 1.2pt solid #54c9c7;
+  background-color: #f05358;
 }
