@@ -184,6 +184,7 @@ const mdq = (item, cantidad) => {
     }
   }
   renderCar();
+  updateCar();
 };
 const cancelCar = () => {
   carrito = [];
