@@ -21,8 +21,8 @@ const renderMenu = (data) => {
       .map(
         (item) =>
           `
-        <div class="col-sm-3">
-        <div class="card mb-3">
+        <div class="col-sm-3 mb-3">
+        <div class="card h-100">
         <img src="${item.image}" class="card-img-top" alt="${item.name}">
         <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
