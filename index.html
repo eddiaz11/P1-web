@@ -12,69 +12,82 @@
 </head>
 <body>
     <div class="container">
-        <div class="row mb-3">
+        <div class="row">
             <div class="col p-2">
                 <h1 class="text-marca">Restaurant &amp; Lounge</h1>
             </div>
             <div class="col p-2 text-end">
-                <span><img src="img/carrito.png" alt="Carrito imagen" class="carrito me-2"></span><span id="numItems"  bind="count">0</span><span> items</span>
+                <span><img onclick="showing(2)" src="img/carrito.png" alt="Carrito imagen" class="carrito me-2"></span><span id="numItems"  bind="count">0</span><span> items</span>
                 
             </div>
         </div>
+        <hr/>
         <div class="row mb-3">
             <img src="img/banner.png" alt="banner" class="w-100">
         </div>
         
-        <div class="row mb-3">
+        <div class="row mb-3" >
             <div class="col">
                 <ul class="nav bg-dark mb-3" id="nav" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#burguers" type="button" role="tab" aria-controls="burguers" aria-selected="true">Burguers</button>
+                        <button onclick="showing(1)" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#burguers" type="button" role="tab" aria-controls="burguers" aria-selected="true">Burguers</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="tacos-tab" data-bs-toggle="tab" data-bs-target="#tacos" type="button" role="tab" aria-controls="tacos" aria-selected="false">tacos</button>
+                        <button onclick="showing(1)" class="nav-link" id="tacos-tab" data-bs-toggle="tab" data-bs-target="#tacos" type="button" role="tab" aria-controls="tacos" aria-selected="false">tacos</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="salad-tab" data-bs-toggle="tab" data-bs-target="#salad" type="button" role="tab" aria-controls="salad" aria-selected="false">salad</button>
+                        <button onclick="showing(1)" class="nav-link" id="salad-tab" data-bs-toggle="tab" data-bs-target="#salad" type="button" role="tab" aria-controls="salad" aria-selected="false">salad</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts" type="button" role="tab" aria-controls="desserts" aria-selected="false">desserts</button>
+                        <button onclick="showing(1)" class="nav-link" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts" type="button" role="tab" aria-controls="desserts" aria-selected="false">desserts</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks" type="button" role="tab" aria-controls="drinks" aria-selected="false">drinks</button>
+                        <button onclick="showing(1)" class="nav-link" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks" type="button" role="tab" aria-controls="drinks" aria-selected="false">drinks</button>
                     </li>
                 </ul>
                 <div class="tab-content" id="navContent">
                     <div class="tab-pane fade show active" id="burguers" role="tabpanel" aria-labelledby="burguers-tab">
-                        <h2>Burguers</h2>                    
-                        <div id="Burguers">
+                        <hr/>
+                        <h2 class="text-center">Burguers</h2>
+                        <hr/>     
+                      
+                            <div class="row" id="Burguers">
                             
-                        </div>
+                            </div>
+                     
                     </div>
                     <div class="tab-pane fade" id="tacos" role="tabpanel" aria-labelledby="tacos-tab">
-                        <h2>Tacos</h2>
-                        <div id="Tacos">
+                        <hr/>
+                        <h2 class="text-center">Tacos</h2>
+                        <hr/>
+                        <div class="row" id="Tacos">
                             
                         </div>
                         
                     </div>
                     <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
-                        <h2>Salad</h2>
-                        <div id="Salads">
+                        <hr/>
+                        <h2 class="text-center">Salad</h2>
+                        <hr/>
+                        <div class="row" id="Salads">
                             
                         </div>
                         
                     </div>
                     <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
-                        <h2>Desserts</h2>
-                        <div id="Desserts">
+                        <hr/>
+                        <h2 class="text-center">Desserts</h2>
+                        <hr/>
+                        <div class="row" id="Desserts">
                             
                         </div>
                         
                     </div>
                     <div class="tab-pane fade" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
-                        <h2>Drinks</h2>
-                        <div id="Drinks and Sides">
+                        <hr/>
+                        <h2 class="text-center">Drinks</h2>
+                        <hr/>
+                        <div class="row" id="Drinks and Sides">
                             
                         </div>
                         
@@ -82,6 +95,14 @@
                 </div>
             </div>
             
+        </div>
+        <div class="row" id="car-list">
+            <div class="col">
+                <hr>
+                <h2 class="text-center">Order detail</h2>
+                <hr>
+
+            </div>
         </div>
     </div>
 </body>

@@ -1,5 +1,4 @@
-var carrito={};
-
+let carrito=[];
 
 const url='https://gist.githubusercontent.com/josejbocanegra/9a28c356416badb8f9173daf36d1460b/raw/5ea84b9d43ff494fcbf5c5186544a18b42812f09/restaurant.json';
 
@@ -29,6 +28,7 @@ const renderMenu = (data) => {
     data.forEach(element => {
         const html = element.products.map((item) =>
     `
+    <div class="col-sm-3">
     <div class="card mb-3">
     <img src="${item.image}" class="card-img-top" alt="${item.name}">
     <div class="card-body">
@@ -36,7 +36,9 @@ const renderMenu = (data) => {
     <p class="card-text">
     ${item.description}
     </p>
-    <a href="#" class="btn btn-primary">add</a>
+    <h5>${item.price}</h5>
+    <a href="#" onClick="add(this)" data-item='${JSON.stringify(item)}' class="btn btn-dark">Add to car</a>
+    </div>
     </div>
     </div>
     `
@@ -48,12 +50,38 @@ const renderMenu = (data) => {
 
 load(url, renderMenu);
 
-const handleAdd = (evt) => {
-    evt.preventDefault();
-    const message = document.getElementById("message");
-    ws.send(message.value);
-    message.value = "";
-};
+const showing =(what)=>{
+    if(what==1){
+        let e = document.getElementById("navContent");
+        e.classList.remove("d-none");
+        e.classList.add("d-block");
+        e = document.getElementById("car-list");
+        e.classList.add("d-none");
+        e.classList.remove("d-block");
+    }
+    else{
+        let e = document.getElementById("car-list");
+        e.classList.remove("d-none");
+        e.classList.add("d-block");
+        e = document.getElementById("navContent");
+        e.classList.add("d-none");
+        e.classList.remove("d-block");
 
-//const btn = document.getElementById("form");
-//form.addEventListener("submit", handleSubmit);
+    }
+}
+
+const updateCar =() =>{
+    document.getElementById("numItems").innerHTML=carrito.length;
+}
+
+const add = (button) => {
+    var item= button.getAttribute("data-item");
+    JSON.parse(item)
+    item["item"]= carrito.length +1;
+    carrito.push(item);
+    updateCar(); 
+}
+const comdifyQ = (item, caltidad) => {
+
+}
+
